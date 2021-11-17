@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
-//new fresh dlc
+import { FaBeer } from 'react-icons/fa';
+import { AiFillEdit } from "react-icons/ai";
 
 class TextEdit extends Component {
     state={
@@ -16,7 +17,8 @@ class TextEdit extends Component {
 
     render() {
         return(
-            this.state.trigger?<div onClick={this.ToggleEl}>{this.state.sentence}</div>:<input value={this.state.sentence} onBlur={this.ToggleEl} onChange={this.changeLis}/>
+
+            this.state.trigger?<div >{this.state.sentence}<AiFillEdit onClick={this.ToggleEl}/></div>:<div><input value={this.state.sentence} onBlur={this.ToggleEl} onChange={this.changeLis} /><AiFillEdit onClick={this.ToggleEl}/></div>
         )
     }
 
